@@ -83,6 +83,29 @@ public class Job {
     public int hashCode() {
         return Objects.hash(getId());
     }
+
+  @Override
+    public String toString(){
+        if(getName().equals("")){
+            this.name = "Data not available";
+        }
+        if(getEmployer().getValue().equals("")){
+            this.employer.setValue("Data not available");
+        }
+        if(getLocation().getValue().equals("")){
+            this.location.setValue("Data not available");
+        }
+        if(getPositionType().getValue().equals("")){
+            this.positionType.setValue("Data not available");
+        }
+        if(getCoreCompetency().getValue().equals("")){
+            this.coreCompetency.setValue("Data not available");
+        }
+
+        return "\nID: " + this.getId() + "\nName: " + this.name + "\nEmployer: " + this.employer + "\nLocation: " + this.location + "\nPosition Type: " + this.positionType + "\nCore Competency: " + this.coreCompetency + "\n";
+    }
+
+
 }
 
 

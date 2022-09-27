@@ -63,6 +63,6 @@ public class JobTest {
         assertEquals("\nID: " + testJob.getId() + "\nName: Bar Manager" + "\nEmployer: Salt and Smoke" + "\nLocation: BPV"  + "\nPosition Type: FOH Salary" + "\nCore Competency: Hospitality" + "\n", testJob.toString());
     }
 
-
+}
 
 

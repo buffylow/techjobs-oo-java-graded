@@ -45,3 +45,24 @@ public class JobTest {
         }
 }
 
+    @Test
+    public void testToStringStartsAndEndsWithNewLine() {
+        Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        assertEquals(testJob.toString().charAt(0), '\n');
+        assertEquals(testJob.toString().charAt(testJob.toString().length() -1), '\n');
+    }
+
+    @Test
+    public void testToStringContainsCorrectLabelsAndData(){
+        Job testJob = new Job("Bar Manager", new Employer("Salt and Smoke"), new Location("BPV"), new PositionType("FOH Salary"), new CoreCompetency("Hospitality"));
+        assertEquals("\nID: " + testJob.getId() + "\nName: Bar Manager" + "\nEmployer: Salt and Smoke" + "\nLocation: BPV"  + "\nPosition Type: FOH Salary" + "\nCore Competency: Hospitality" + "\n", testJob.toString());
+    }
+    @Test
+    public void testToStringHandlesEmptyField(){
+        Job testJob = new Job("Bar Manager", new Employer("Salt and Smoke"), new Location("BPV"), new PositionType("FOH Salary"), new CoreCompetency("Hospitality"));
+        assertEquals("\nID: " + testJob.getId() + "\nName: Bar Manager" + "\nEmployer: Salt and Smoke" + "\nLocation: BPV"  + "\nPosition Type: FOH Salary" + "\nCore Competency: Hospitality" + "\n", testJob.toString());
+    }
+
+}
+
+

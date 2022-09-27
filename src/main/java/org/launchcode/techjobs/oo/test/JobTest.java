@@ -43,7 +43,7 @@ public class JobTest {
             Job job2 = new Job("Bar Manager", new Employer("Salt and Smoke"), new Location("BPV"), new PositionType("FOH Salary"), new CoreCompetency("Hospitality"));
             assertFalse(job1.equals(job2));
         }
-}
+
 
     @Test
     public void testToStringStartsAndEndsWithNewLine() {

@@ -14,8 +14,8 @@ import static org.junit.Assert.*;
 public class JobTest {
         @Test
         public void testSettingJobId() {
-            Job testJobEmptyone = new Job();
-            Job testJobEmptytwo = new Job();
+            Job testJobEmpty1 = new Job();
+            Job testJobEmpty2 = new Job();
             assertNotEquals(testJobEmpty1, testJobEmpty2);
         }
         @Test
